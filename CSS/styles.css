@@ -1,0 +1,43 @@
+/*WATCH THE CSS BOX MODEL VIDEO FOR CSS STYLING!!!!*/
+
+body {
+    margin: 0px;
+    text-align: center;
+    font-family: "Merriweather", serif;
+}
+
+h1 {
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/margin*/
+    margin-top: 0;
+    font-family: 'Sacramento', serif;
+}
+
+h2 {
+    font-family: "Montserrat", serif;
+}
+
+h3 {
+    font-family: "Montserrat", serif;
+}
+
+.top-container {
+    background-color: #E4F9E5;
+    position: relative;
+    padding-top: 100px;
+}
+
+.pro {
+    text-decoration: underline;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+}

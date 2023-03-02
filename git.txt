@@ -1,0 +1,122 @@
+https://www.youtube.com/watch?v=tRZGeaHPoaw  youtube video tutorial
+https://git-scm.com/book/en/v2       web version of git pro book
+
+//////Working with local repositories and basic commands\\\\\\\\\\\\\\\\\
+What is Git?
+    It is free SCM, or source control management.
+
+What does typing the command `git intit` do?
+    Creates a new repository from your current directory.
+
+How do we show the hidden git folder on our local system?
+    Navigate to the folder, hit view, then show, then hidden items.
+
+How do we track a file using git command?
+    git add `file`
+
+How do we remove a file using git command?
+    git rm --cached `file`
+
+What does `git status` show?
+    shows files that are being tracked and the ones that are untracked.
+
+How do we keep files from ever being tracked or uploaded?
+    add that file to the .gitignore file.
+
+How do we add all files to the tracked list?
+    git add --all
+
+How do we commit all tracked files from terminal?
+    git commit -m `"commit message"`
+
+What command will rename a file in terminal?
+    git mv `"original file name"` `"new file name"`
+
+What command will show all of the different commits?
+    git log. this shows the author, date, and committ messages.
+
+How do you ammend your last committ message from terminal?
+    git commit -m `"type your corrected message"` --ammend
+
+How do you show all of the changes that were made with each committ? Not just the message, the actual changes?
+    git log -p
+
+How do we revert to previous commits?
+    use git log, or git log -p and find the hash value of the change that you want to revert to, and then use the command
+    git reset `hash value of commit you wish to revert to`
+
+What is the purpose of creating additional branches in repositories?
+    new branches are essentially clones of the main branch, used to debug or develop new features. Once the developer 
+    has debugged or developed their new feature fully, they merge their branch back with the main branch.
+
+How do we create a new branch?
+    git branch `name of new branch`
+
+how do we show all of the branches?
+    git branch  
+        this will show all of the branches with a `*` next to the active one.
+
+How do we switch between active branches?
+    git switch `branch name that we want to switch to`
+
+After we've made our changes in a separate branch, how do we merge it back to the main?
+    git merge -m `"commit/merge message that you wish to enter"`
+
+How do we delete a branch?
+    git branch -d `branch name that you want to delete`
+
+What happens if we try to merge a branch back into main, but the main branch has been changed since we cloned our branch?
+    In this case you would have a merge conflict. (see section below on Git merge conflicts)
+
+
+///////////////////////how to work with others on github\\\\\\\\\\\\\\\\\\\\\\\\\
+
+How do we merge changes that happened in the cloud on github with the files on our local machine?
+    git fetch    will show all of the changes
+    git merge    will merge all of the changes to our local machine.
+    git pull     combines both of the above commands into one command.
+    
+
+//////Repository tabs\\\\\\
+
+//issues tab\\
+>used for submitting feature requests or reporting bugs. Create a title, write a comment, and hit `submit new issue`
+>we can also assign the issue to be dealt with by a team member in the issues tab
+
+//code tab\\
+>shows all of the various code for the selected branch and allows us to edit it and commit changes. (see minute 40 in video linked at top)
+    >the changes can be committed directly or they can be done by creating a new branch and submitting a 
+    pull request. If we do the pull request, it will create a new branch, and someone else on the team can
+    review the change before it's committed to the main branch.
+    >include a name for the new branch and hit `propose changes` this will create a new branch with the name
+    we entered.
+    >after we hit `propose changes` it will bring us to a new page where we can enter comments about the changes we propose.
+    Then, we hit `create pull request.
+    >we can also tie a pull request to an issue, and once we commit the pull request to the main branch, it will close the issue.
+
+//actions\\
+    >here we can run tests and write programs to manage our repository
+
+//projects\\
+    > a project management view. You can view all of the projects and pull requests issues, etc.
+
+//wiki\\
+    >use this tab to document your code.
+
+//insights\\
+    > similar to projects, but with different views.
+
+////////////////////Step by step how to resolve git merge conflicts\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+****watch this probably incorrect and confusing dev camp video.
+
+
+
+
+
+
+
+
+
+
+
+

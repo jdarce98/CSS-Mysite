@@ -1,0 +1,75 @@
+//////////////////////Video: CSS Display property\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+4 display types
+    1. Block: takes up a whole "block" width of the screen. Width cannont be modified
+        and block items display on top of one another. Can't display next to each other.
+        Height is determined by the content.
+        >example: p tags are default to block display.
+    2. Inline: width is default to the default width of the item. Width can be modified.
+        Can be displayed next to one another.
+        >example: span tags are set to inline by default.
+    3. Inline-block: just like a block display except the width and height can be modified.
+        best of both worlds.
+    4. None: If we set display to none, it removes the element from the site. Almost the same
+        as deleting the element.
+
+///////////////////////Video: CSS Static and Relative Positioning\\\\\\\\\\\\\\\\\\\\\\\\\\
+HTML elements have 3 pre-defined or default rules about how they are displayed or styled on our page
+
+    1. Content is everything. See above notes from previous videos.
+    2. Order of elements on screen come from code.
+    3. Children sit on top of parents.
+        a. For example: lets say our div had a background color of red and our h1 had a background color 
+        of purple. In the below case, the h1 would cover an area of the div. the span would cover an area
+        of the h1, and sit on top of both.
+            <div>
+                <h1><span>I'm</span> a programmer </h1>
+            <div>
+
+We can set the CSS Position property to make changes to the default position property.
+    1. Static: default HTML position. 
+    2. Relative: this allows us to position elements relative to their default postion.
+    This is confusing, but try to think of this in terms of adding margins...
+        a. Example:
+            img {
+                position: relative
+                left: 30px;
+            }
+        
+        >`left` means that our origin is the left edge of the image. 30 px will push it to the right
+        side of the screen by 30 pixels.
+
+        b. Example:
+            img {
+                position: relative
+                right: 30px;
+            }
+        > `right` means we reference off of the right edge of the image, but the image moves to the left by
+        30 pixels. This moves the image as if we said, margin right: 30 px;. However, unlike margin, position
+        does not push the other elements around.
+
+//////////////////Video: Absolute positioning\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ABSOLUTE POSITIONING DOES AFFECT THE POSTION OF OTHER ELEMENTS!!!!!
+
+        a. Example:
+            img {
+                position: Absolute
+                right: 30px;
+            }
+        > here our image will move to a position that leaves 30 pixels of distance between the right edge of the
+        image and the right edge of the parent container. It's the same as saying margin right: 30px; but its in 
+        reference to whatever the parent container is.
+
+Last type of positioning is `fixed`
+        
+        a. Example:
+            img {
+                postion: fixed
+                top: 0px;
+            }
+        > here, our image will stay fixed to the top of the screen even when we scroll.
+
+/////////////Video: The Dark Art of Centering Elements with CSS\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+> The text-align property must be set in the parent container. It will only work on elements inside the container
+that do not have a width set. If an item does have a width set, use margin /*https://developer.mozilla.org/en-US/docs/Web/CSS/margin*/
+
+
