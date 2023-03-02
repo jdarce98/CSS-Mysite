@@ -46,7 +46,10 @@ How do we revert to previous commits?
     git reset `hash value of commit you wish to revert to`
 
 How do we revert only a single portion of the commit? Like, we don't want to undo everything, just the changes to one file?
-    
+    One way is to use the command> git log -p   this will display the actual changes in the terminal itself. Then we can select
+    previous version from the terminal and paste it into our file, then recommit.
+
+    Another way 
 
 What is the purpose of creating additional branches in repositories?
     new branches are essentially clones of the main branch, used to debug or develop new features. Once the developer 
